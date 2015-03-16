@@ -18,4 +18,3 @@ foreach($user in $users)
 	}	
 }
 $web.Dispose()
-$site.Dispose()
