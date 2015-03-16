@@ -7,7 +7,7 @@ $param (
 )
 
 if (($Ssl -eq $true) -or ($protocol -eq "https")){ 
-New-WebBinding -Name "$($webApp)" -Force -HostHeader "hostHeaderSiteCollectionUrl" -Port "443" -Protocol "https" -sslFlags 1
+New-WebBinding -Name "$($webApp)" -Force -HostHeader "$($Url)" -Port "443" -Protocol "https" -sslFlags 1
 }
 else {
 New-WebBinding -Name "$($webApp)" -Force -HostHeader "$($Url) -Port $Port -Protocol $Protocol -sslFlags 0 
